@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class VucutKitleIndeksi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double boy=0,kilo = 0,vki=0;
+        System.out.print("Lütfen boyunuzu(metre cinsinden) giriniz :");
+        boy = input.nextDouble();
+        System.out.print("Lütfen kilonuzu giriniz :");
+        kilo = input.nextDouble();
+
+        vki = kilo/(boy*boy);
+        System.out.print("Vücut kitle indeksiniz :"+vki);
+    }
+}
