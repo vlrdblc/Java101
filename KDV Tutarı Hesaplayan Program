@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class KdvTutariHesaplama {
+    public static void main(String[] args) {
+        double kdvli=0,kdvsiz=0,para=0,kdvTutari=0;
+        //double kdv = 18;
+        
+        Scanner input = new Scanner(System.in);
+        System.out.print("Hesaplanacak parayı giriniz : ");
+        para = input.nextInt();
+
+        boolean kdvOrani = para>0 && para < 1000 ;
+        int kdv = kdvOrani ? 18 : 8;
+        System.out.println("Girilen tutara göre KDV oranı :"+kdv);
+        
+        kdvTutari = (para * kdv) / 100;
+        kdvli = para+(para*kdv/100);
+        System.out.println("Kdv\'siz :"+ para);
+        System.out.println("Kdv\'li tutar :"+ kdvli);
+        System.out.println("Kdv tutarı :"+kdvTutari);
+    }
+}
