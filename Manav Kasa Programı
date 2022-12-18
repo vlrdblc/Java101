@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class ManavKasaProgrami {
+    public static void main(String[] args) {
+        double armut=2.14, elma = 3.67, domates = 1.11, muz = 0.95,patlican=5,toplam=0;
+
+        Scanner kg = new Scanner(System.in);
+
+        System.out.print("Armut kaç kilo ? :");
+        toplam += kg.nextDouble()*armut;
+        System.out.print("Elma kaç kilo ? :");
+        toplam += kg.nextDouble()*elma;
+        System.out.print("Domates kaç kilo ? :");
+        toplam += kg.nextDouble()*domates;
+        System.out.print("Muz kaç kilo ? :");
+        toplam += kg.nextDouble()*muz;
+        System.out.print("Patlıcan kaç kilo ? :");
+        toplam += kg.nextDouble()*patlican;
+        System.out.print("Toplam tutar :"+toplam);
+    }
+}
