@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class TaksimetreHesabi {
+    public static void main(String[] args) {
+        Scanner giris = new Scanner(System.in);
+        double km=0,ucret=0;
+        System.out.print("Hoşgeldiniz,\nTaksimetre açılış ücreti 10TL'dir.\nHer km başına 2.20 TL tutmaktadır.\n");
+        System.out.println("En düşük tutar 20 TL'dir.\nİyi Yolculuklar.");
+        System.out.println("************************************************");
+        System.out.print("Kaç KM seyahat edeceğinizi yazınız :");
+        km = giris.nextDouble();
+        System.out.println(km+" KM seyahat edeceksiniz");
+        ucret =10+(km*2.20);
+        boolean degerlendirme = ucret < 20;
+        ucret = degerlendirme ? 20:ucret;
+        System.out.print("Ödeyeceğiniz ücret : "+ucret);
+    }
+}
