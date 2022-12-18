@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class NotOrtalamasiHesaplama {
+    public static void main(String[] args) {
+        Scanner not = new Scanner(System.in);
+        double matematikNotu = 0;
+        double fizikNotu = 0;
+        double kimyaNotu = 0;
+        double turkceNotu = 0;
+        double tarihNotu = 0;
+        double muzikNotu = 0;
+        double sinifGecmePuani = 0;
+        System.out.print("Matematik dersi 1. sınav notunu giriniz :");
+        matematikNotu = not.nextDouble();
+        System.out.print("Matematik dersi 2. sınav notunu giriniz :");
+        matematikNotu = (matematikNotu+not.nextDouble())/2;
+        System.out.println("Matematik dersi sınav ortalaması :"+matematikNotu);
+
+        System.out.print("Fizik dersi 1. sınav notunu giriniz :");
+        fizikNotu = not.nextDouble();
+        System.out.print("Fizik dersi 2. sınav notunu giriniz :");
+        fizikNotu = (fizikNotu+not.nextDouble())/2;
+        System.out.println("Fizik dersi sınav ortalaması :"+fizikNotu);
+
+        System.out.print("Kimya dersi 1. sınav notunu giriniz :");
+        kimyaNotu = not.nextDouble();
+        System.out.print("Kimya dersi 2. sınav notunu giriniz :");
+        kimyaNotu = (kimyaNotu+not.nextDouble())/2;
+        System.out.println("Kimya dersi sınav ortalaması :"+kimyaNotu);
+
+        System.out.print("Türkçe dersi 1. sınav notunu giriniz :");
+        turkceNotu = not.nextDouble();
+        System.out.print("Türkçe dersi 2. sınav notunu giriniz :");
+        turkceNotu = (turkceNotu+not.nextDouble())/2;
+        System.out.println("Türkçe dersi sınav ortalaması :"+turkceNotu);
+
+        System.out.print("Tarih dersi 1. sınav notunu giriniz :");
+        tarihNotu = not.nextDouble();
+        System.out.print("Tarih dersi 2. sınav notunu giriniz :");
+        tarihNotu = (tarihNotu+not.nextDouble())/2;
+        System.out.println("Tarih dersi sınav ortalaması :"+tarihNotu);
+
+        System.out.print("Müzik dersi 1. sınav notunu giriniz :");
+        muzikNotu = not.nextDouble();
+        System.out.print("Müzik dersi 2. sınav notunu giriniz :");
+        muzikNotu = (muzikNotu+not.nextDouble())/2;
+        System.out.println("Müzik dersi sınav ortalaması :"+muzikNotu);
+        sinifGecmePuani = (matematikNotu+fizikNotu+kimyaNotu+turkceNotu+tarihNotu+muzikNotu)/6;
+        System.out.println("Not ortalaması "+sinifGecmePuani);
+
+        boolean gecmeDurumu = sinifGecmePuani > 60 ;
+        String sonuc = gecmeDurumu ? "Sınıfı Geçti" : "Sınıfta Kaldı";
+        System.out.print(sonuc);
+    }
+}
