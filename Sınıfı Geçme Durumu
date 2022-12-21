@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class SinifGecmeDurumu {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int matematikNotu = 0;
+        int fizikNotu = 0;
+        int kimyaNotu = 0;
+        int turkceNotu = 0;
+        int muzikNotu = 0;
+        int sinifGecmePuani = 0;
+        int dersAdedi=0;
+        System.out.print("Matematik dersi notunu giriniz :");
+        matematikNotu = input.nextInt();
+        if(matematikNotu>=0 && matematikNotu<=100){
+            dersAdedi+=1;
+            sinifGecmePuani+=matematikNotu;
+        }
+        System.out.print("Fizik dersi  notunu giriniz :");
+        fizikNotu = input.nextInt();
+        if(fizikNotu>=0 && fizikNotu<=100){
+            dersAdedi+=1;
+            sinifGecmePuani+=fizikNotu;
+        }
+        System.out.print("Kimya dersi notunu giriniz :");
+        kimyaNotu = input.nextInt();
+        if(kimyaNotu>=0 && kimyaNotu<=100){
+            dersAdedi+=1;
+            sinifGecmePuani+=kimyaNotu;
+        }
+        System.out.print("Türkçe dersi notunu giriniz :");
+        turkceNotu = input.nextInt();
+        if(turkceNotu>=0 && turkceNotu<=100){
+            dersAdedi+=1;
+            sinifGecmePuani+=turkceNotu;
+        }
+        System.out.print("Müzik dersi notunu giriniz :");
+        muzikNotu = input.nextInt();
+        if(muzikNotu>=0 && muzikNotu<=100){
+            dersAdedi+=1;
+            sinifGecmePuani+=muzikNotu;
+        }
+        if(dersAdedi==0) {
+            dersAdedi=1;
+        }
+        sinifGecmePuani = sinifGecmePuani/dersAdedi;
+        if(sinifGecmePuani<=55){
+            System.out.println("Sınıfta kaldınız seneye tekrar görüşmek üzere");
+        }else{
+            System.out.println("Tebrikler sınıfı geçtiniz !");
+        }
+        System.out.println("Ortalamanız : "+sinifGecmePuani);
+    }
+}
