@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class ArtikYilHesaplama {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int mod4=0,mod400=0,mod100=0,yil;
+
+        System.out.println("Yıl giriniz :");
+        yil = input.nextInt();
+
+        mod4 = yil%4;
+        mod100 = yil%100;
+        mod400 = yil%400;
+        
+        if(mod400 ==0)
+        {
+            System.out.println(yil+" bir artık yıldır!");
+        }
+        else if(mod400 !=0 && mod100==0)
+            System.out.println(yil+" bir artık yıl değildir!");
+        else if(mod4==0)
+            System.out.println(yil+" bir artık yıldır!");
+        else System.out.println(yil+" bir artık yıl değildir!");
+    }
+}
