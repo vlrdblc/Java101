@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class GirilenSayiyaKadar3ve4eBolunen {
+        public static void main(String[] args) {
+            int k,mod3,mod4;
+            int i = 1;
+            int toplam=0,sayiAdedi=0;
+            Scanner input=new Scanner(System.in);
+            System.out.print("Sayıyı giriniz :");
+            k = input.nextInt();
+            while(i<=k){
+                mod3 = i%3;
+                mod4 = i%4;
+                if(mod3 ==0 && mod4 ==0)
+                {
+                    toplam += i;
+                    sayiAdedi++;
+                }
+                i++;
+            }
+            if(sayiAdedi==0) sayiAdedi=1;
+            System.out.print("Girilen sayılardan 3 ve 4 e tam bölünen sayıların ortalaması :"+(toplam/sayiAdedi));
+        }
+}
