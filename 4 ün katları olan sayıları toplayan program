@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class TekSayiGirileneKadar {
+    public static void main(String[] args) {
+        int i=0,tek=1,mod4,toplam=0;
+        Scanner input = new Scanner(System.in);
+
+        do{
+            System.out.print("Bir sayi giriniz - Çıkmak için tek sayi giriniz :");
+            i = input.nextInt();
+            tek = i % 2;
+            mod4 = i%4;
+
+            if(mod4 ==0){
+                toplam +=i;
+            }
+
+        }while(tek!=1);
+        System.out.println("Girilen sayıların toplamı :"+toplam);
+        System.out.println("Tek sayi girdiniz");
+    }
+}
