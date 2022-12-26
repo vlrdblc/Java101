@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MinMaxBulma {
+    public static void main(String[] args) {
+        Scanner sayi = new Scanner(System.in);
+        int min=0,maks=0,temp=0;
+        int sayiAdedi = 0;
+        System.out.print("Sayı adedi giriniz :");
+        sayiAdedi = sayi.nextInt();
+
+        for(int i=1;i<=sayiAdedi;i++){
+            System.out.print(i+".sayıyı giriniz :");
+            temp = sayi.nextInt();
+            if(i == 1) {
+                min = temp;
+                maks = temp;
+            }
+            if(temp>maks){
+                maks = temp;
+            }else if(temp <= min){
+                    min = temp;
+                }
+            }
+        System.out.println("En büyük sayı :"+maks);
+        System.out.println("En küçük sayı :"+min);
+    }
+}
