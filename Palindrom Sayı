@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class PalindromSayilar {
     static boolean isPalindrom(int number){
         int temp = number, reverseNumber = 0, lastNumber;
@@ -16,6 +17,9 @@ public class PalindromSayilar {
     }
 
     public static void main(String[] args) {
-       System.out.println(isPalindrom(747));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Sayı giriniz :");
+        int sayi = input.nextInt();
+       System.out.println(isPalindrom(sayi));
     }
 }
