@@ -1,4 +1,3 @@
-package KosulluIfadelerveKodBloklari;
 import java.util.Scanner;
 public class UcakBiletiHesaplama {
     public static void main(String[] args) {
