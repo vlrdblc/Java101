@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class UsluSayiHesapla {
+    public static int usluSayiHesapla(int sayi, int us) {
+        if (us == 0) {
+            return 1;
+        }
+        else {
+            return sayi * usluSayiHesapla(sayi, us-1);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Taban değerini giriniz :");
+        int taban = input.nextInt();
+        System.out.println("Üs değerini giriniz :");
+        int us = input.nextInt();
+        System.out.println(usluSayiHesapla(taban,us));
+    }
+}
