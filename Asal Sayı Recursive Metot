@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class AsalSayiRecursive {
+
+    public static boolean asalSayi(int sayi, int i){
+        if (sayi <= 2)
+            return (sayi == 2) ? true : false;
+        if (sayi % i == 0)
+            return false;
+        if (i * i > sayi)
+            return true;
+        return asalSayi(sayi, i + 1);
+    }
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Sayıyı giriniz :");
+        int sayi = input.nextInt();
+        int i = 2;
+        boolean sonuc =asalSayi(sayi,i);
+        if(sonuc==true){
+            System.out.println(sayi+" sayısı ASALDIR!");
+        }
+        else System.out.println(sayi+" sayısı ASAL değildir!");
+    }
+}
